@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>绑定账户</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/bindPhone.css">
+</head>
+
+<body>
+    <section class="ck-box">
+        <div class="ck-item flex">
+            <span>手机号</span>
+            <input type="number" maxlength="11" name="cPhone" class="ck-phone" placeholder="请输入手机号">
+            <button class="btn-yzm">获取验证码</button>
+        </div>
+        <div class="ck-item flex">
+            <span>验证码</span>
+            <input type="number" class="ck-input" name="cCode" placeholder="请输入验证码" maxlength="6">
+        </div>
+
+    </section>
+    <!-- //确定框 -->
+    <div class="ck-btn">
+        <button class="weui-btn weui-btn_zf">确认</button>
+    </div>
+</body>
+<script>
+    let t = new Date().getTime()
+    document.write('<script src="../js/libs/require.js" data-main="../js/bindPhone.js?t=' + t + '" ><\/script>')
+</script>
+</html>

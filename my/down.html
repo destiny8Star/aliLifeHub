@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>下载点击生活</title>
+    <link rel="stylesheet" href="../css/public.css">
+    <script>
+        let t = new Date().getTime()
+        document.write(' <link rel="stylesheet" href="../css/about.css?t=' + t + '" >')
+    </script>
+    <!-- <link rel="stylesheet" href="../css/about.css"> -->
+</head>
+
+<body>
+    <!-- log部分 -->
+<section class="down">
+    <div class="dow-left">
+        <img src="../img/logoDown.png" alt="">
+    </div>
+    <div class="dow-right">
+        <img src="../img/QXZ.png" alt="">
+    </div>
+</section>
+
+
+</body>
+<script src="../js/apps/flexible.js"></script>
+<script src="../js/libs/jquery-3.3.1.min.js"></script>
+<script>
+    function detect() {
+        var equipmentType = "";
+        var agent = navigator.userAgent.toLowerCase();
+        var android = agent.indexOf("android");
+        var iphone = agent.indexOf("iphone");
+        var ipad = agent.indexOf("ipad");
+        if (android != -1) {
+            equipmentType = "android";
+        }
+        if (iphone != -1 || ipad != -1) {
+            equipmentType = "ios";
+        }
+        return equipmentType;
+    }
+    $(".dow-right").click(function () {
+        let type = detect();
+        if (type == "android") {
+            location.href = "http://prod.dianjishenghuo.cn/app/djsh_android1.2.0.apk"
+        } else if (type = "ios") {
+            location.href = "https://itunes.apple.com/cn/app/id1462765230"
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,73 @@
+html,
+body {
+    background: #f8f8f8;
+}
+
+.add-item {
+    width: 100%;
+    padding: .3rem .3rem .2rem;
+    margin-bottom: .2rem;
+    background: #fff;
+    color: #3E3E4D;
+    font-size: .28rem
+}
+
+.add-item-tit {
+    align-items: center;
+}
+
+h5 {
+    font-size: .32rem;
+    margin-right: .3rem
+}
+
+.add-item-woc {
+    margin-bottom: .5rem
+}
+
+.add-item-bot {
+    font-size: .24rem;
+    color: #909090
+}
+
+.add-item-bot img {
+    width: .38rem;
+    height: .38rem;
+    margin-right: .1rem
+}
+
+.add-item-bot-left img {
+    width: .36rem;
+    height: .36rem;
+}
+
+.add-item-bot-edit {
+    margin-right: .27rem
+}
+
+.add-address {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.add-address img {
+    width: .24rem;
+    height: .24rem;
+    display: inline-block;
+    margin-right: .2rem
+}
+
+.default {
+    color: #3EACF9
+}
+
+.weui-dialog__bd {
+    font-size: .34rem;
+    color: #3E3E4D
+}
+
+.weui-dialog__btn {
+    color: #01A1FF!important
+}

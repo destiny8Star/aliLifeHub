@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>商品详情</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/mallDetail.css">
+
+</head>
+
+<body>
+<!-- 顶部 -->
+<section class="banner">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="../img/XQt.png" alt=""></div>
+            <div class="swiper-slide"><img src="../../test-png/5.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="../img/DP.png" alt=""></div>
+            <div class="swiper-slide"><img src="../../test-png/er.jpg" alt=""></div>
+
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<!-- //info -->
+<section class="goodInfo">
+    <div class="goodPlus flex">
+        <div class="goodPlus-num">￥<span>99.00</span></div>
+        <div class="goodPlus-woc">PLUS价</div>
+    </div>
+    <div class="goodPrice flex_bet">
+        <div class="goodPrice-num">价格￥88.88</div>
+        <div class="goodPrice-woc">快递费：00.00</div>
+    </div>
+    <div class="goodTit">2019夏装新款韩版修身镂空条纹短袖主标题身镂空条纹短袖主标题</div>
+    <div class="goodTitd">副标题2019夏装新款韩版修身镂空条纹短袖主标题身镂空条纹短袖主标题2019夏装新款韩版修身镂空条纹短袖主标题身镂空条纹短袖主标题</div>
+    <div class="goodYH flex">
+        <span class="goodYH-tit">优惠</span>
+        <span class="goodYH-fx">返现</span>
+        <span class="goodYH-woc">店内消费返现10元</span>
+    </div>
+    <div class="goodFW flex">
+            <span class="goodFW-tit">优惠</span>
+            <span class="goodFW-woc">部分地方包邮（除新疆、内蒙古、西藏、青海、四川、宁夏 等地区除外）</span>
+    </div>
+</section>
+<section class="goodDetail">
+    <img src="../img/DP.png" alt="">
+    <img src="../img/XQt.png" alt="">
+</section>
+<!-- //底部 -->
+<div class="goodBtn"><button class="weui-btn weui-btn_zf ">立即购买</button></div>
+<!-- 遮罩 -->
+<section class="mask">
+    <div class="mask-box flex">
+        <div class="mask-box-left"><img src="../img/XQt.png" alt=""></div>
+        <div class="mask-box-right">
+            <h3>2019夏装新款韩版修身镂空 条纹短袖主标2019夏装新款韩版修身镂空 条纹短袖主标</h3>
+            <div class="goodPlus goodPlusm flex">
+                <div class="goodPlus-num">￥<span>99.00</span></div>
+                <div class="goodPlus-woc">PLUS价</div>
+            </div>
+            <div class="goodPrice">
+                <div class="goodPrice-num">价格￥88.88</div>
+            </div>
+        </div>
+        <div class="mask-num flex_bet">
+                <span>购买数量</span>
+                <div class="mask-num-btn flex">
+                    <img src="../img/JS.png" alt="" class="mask-num-btnJ">
+                     <div class="mask-num-num">1</div>
+                    <img src="../img/TJ.png" alt="" class="mask-num-btnA">
+                </div>
+            </div>
+    </div>
+    <div class="goodBtn2"><button class="weui-btn weui-btn_zf ">立即购买</button></div>
+
+</section>
+</body>
+<script src="../js/public.js"></script>
+<script src="../js/flexible.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+<script src="../js/swiper.min.js"></script>
+<script>
+  //swiper组件
+  var mySwiper = new Swiper ('.swiper-container', {
+    loop: true, // 循环模式选项
+    autoplay: true,
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  })
+  //点击购买
+  $(".goodBtn").click(function(){
+    $(".mask").show()
+  })
+  //数量加减
+  $(".mask-box").click(function(e){
+    e.stopPropagation(); 
+  })
+  $(".mask-num-btnJ").click(function(e){
+      let num=$(".mask-num-num").text()
+      if(num<=1) return
+      else{
+         num--
+         $(".mask-num-num").text(num)
+      }
+  })
+  $(".mask-num-btnA").click(function(e){
+      let num=$(".mask-num-num").text()
+      num++
+      $(".mask-num-num").text(num)
+  })
+  //点击遮罩消失
+  $(".mask").click(function(){
+      $(this).hide()
+  })
+  $(".goodBtn2").click(function(e){
+    e.stopPropagation(); 
+    console.log("aa")
+  })
+</script>
+
+</html>

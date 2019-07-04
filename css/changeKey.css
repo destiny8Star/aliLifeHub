@@ -1,0 +1,80 @@
+body,html{
+    background: #f8f8f8
+}
+.ck-box{
+    background: #fff;
+    width: 100%;
+    padding:.42rem .26rem .24rem;
+    font-size: .28rem;
+    color:#3E3E4D
+}
+.ck-item{
+    margin-bottom: .24rem;
+}
+.ck-inp1{
+    width: 100%;
+    border:.02rem solid #c0c0c0;
+    border-radius: .08rem;
+    padding:.24rem .36rem;
+    padding-right: 0;
+    margin-top: .24rem
+}
+.ckInputBox{
+    width: 100%;
+    padding: .24rem .36rem;
+    border-radius: .08rem;
+    border:.02rem solid #c0c0c0;
+    margin-top: .24rem 
+}
+.ck-input{
+    /* width: 100%;
+    padding: .24rem .36rem; */
+    /* border-radius: .08rem; */
+    /* border:.02rem solid #c0c0c0; */
+    outline: none;
+    border:0;
+    font-size: .32rem
+    /* margin-top: .24rem */
+}
+.ck-phone{
+    font-size: .32rem;
+    outline: none;
+    border:0;
+    width: 3rem
+}
+.btn-yzm{
+    border:0;
+    border-left: .02rem solid #909090;
+    /* padding:0 .36rem; */
+    width: 2.6rem;
+    height: .48rem;
+    font-size: .28rem;
+    color: #FFB715;
+    background: #fff;
+    outline: none;
+}
+ input::-webkit-input-placeholder{
+    color: #909090;
+    font-size: .28rem;
+}
+ input::-moz-placeholder{  
+    color: #909090;     
+    font-size: .28rem   ;
+
+}
+ input:-ms-input-placeholder{ 
+    color: #909090;     
+    font-size: .28rem;   
+
+}
+.ck-btn{
+    width: 100%;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   padding: .36rem .54rem
+}
+.btn-yzmN{
+    color:#909090;
+    font-size: .24rem
+}

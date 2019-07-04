@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>添加收货地址</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/addAddress.css">
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <section class="addAd">
+        <div class="add-name flex">
+            <span>收件人</span>
+            <input type="text" name="name" placeholder="请填写收件人">
+        </div>
+        <div class="add-name flex">
+            <span>手机号</span>
+            <input type="number" name="phone" maxlength="11" placeholder="请输入手机号码">
+        </div>
+        <div class="add-name flex_bet">
+            <span>收货地址</span>
+            <!-- <input type="text" placeholder="选择省市"> -->
+            <a href="selCity.html">
+                <div class="flex_cen">
+                    <div id="chose">选择省市</div>
+                    <img src="../img/jiantoux.png" alt="">
+
+                </div>
+            </a>
+        </div>
+        <div class="add-name">
+            <input class="add-detail" name="addDetail" type="text" placeholder="请填写详细地址">
+        </div>
+    </section>
+    <!-- //保存收货地址 -->
+    <div class="addAd-btn"><button class="weui-btn weui-btn_ad weui-btn_zf">保存地址</button></div>
+
+</body>
+<script src="../js/flexible.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+<!-- <script src="../js/city.js"></script>
+<script src="../js/picker.min.js"></script>
+<script src="../js/pic-city.js"></script> -->
+<script>
+    let city = localStorage.getItem("city")
+    console.log("获取缓存地址", city, document.referrer)
+    if (city) {
+        city = JSON.parse(city)
+        $("#chose").text(city.province + " " + city.city + " " + city.area)
+    }
+    $(".weui-btn_zf").click(function() {
+        let name = $("input[name='name']").val()
+        let phone = $("input[name='phone']").val()
+        let cityText = $("#chose").text()
+        let addDetail = $("input[name='addDetail']").val()
+            // $.toast("成功")
+        console.log(name, phone, cityText, addDetail)
+        localStorage.removeItem("city")
+    })
+</script>
+
+</html>

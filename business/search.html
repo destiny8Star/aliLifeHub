@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>店铺搜索</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+
+<body>
+    <!-- //头部框 -->
+<section class="head flex_bet">
+   <input type="text" placeholder="请输入店铺名称" class="inputs" type="search">
+   <span>搜索</span>
+</section>
+<!-- 搜索历史 -->
+<section class="history">
+    <h4>历史记录</h4>
+    <div class="hisWoc">
+        <!-- <p class="item">无线鼠标充电器</p> -->
+    </div>
+</section>
+</body>
+<script>
+  let t = new Date().getTime()
+  document.write('<script src="../js/libs/require.js" data-main="../js/search.js?t=' + t + '"><\/script>')
+</script>
+<!-- <script src="../js/public.js"></script>
+<script src="../js/flexible.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script> -->
+
+</html>

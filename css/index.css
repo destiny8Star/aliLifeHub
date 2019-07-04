@@ -1,0 +1,228 @@
+body,html{
+    background: #fff;
+    margin-bottom: 1.5rem
+}
+.top{
+    width: 100%;
+    height: 1.92rem;
+    background-image: url("../img/BJ@2x.png");
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    padding:.18rem .25rem 0
+}
+.input {
+    width: 6.28rem;
+    height: .6rem;
+    background: #F0EFEB;
+    border-radius: .31rem;
+    padding: 0 .16rem
+}
+
+.top img {
+    width: .54rem;
+    height: .54rem;
+}
+
+.input img {
+    flex: 0 0 .34rem;
+    height: .34rem;
+    width: .34rem
+}
+
+.input input {
+    flex: 1;
+    font-size: .26rem;
+    border: none;
+    background: none;
+    padding: 0 .16rem;
+    outline: none
+}
+
+.input input::-webkit-input-placeholder {
+    color: #909090;
+}
+
+.input input::-moz-placeholder {
+    color: #909090;
+}
+
+.input input:-ms-input-placeholder {
+    color: #909090;
+}
+h4{
+    margin-top: .2rem;
+    color: #3E3E4D;
+    font-size: .4rem
+}
+.banner{
+    width: 100%;
+    overflow: hidden;
+    height: 3.3rem
+}
+.swiper-pagination-bullet{
+    width: 0.08rem;
+    height: 0.08rem;
+    background:rgba(255,255,255,0.5);
+  } 
+  .swiper-pagination-bullet-active{
+    width:.18rem;
+    height:0.08rem;
+    background:rgba(255,255,255,1);
+    border-radius:0.04rem;
+  }
+  .swiper-container{
+      height: 100%;
+  }
+  .otherImg{
+      width: 100%;
+      height: 3.3rem;
+      margin-bottom: .24rem
+  }
+  
+.bus-type {
+    width: 100%;
+    padding: 0 .3rem 
+}
+
+.type-item {
+    margin: 0 .05rem .22rem
+}
+
+.type-item img {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+.type-item span {
+    display: block;
+    font-size: .24rem;
+    color: #3E3E4D;
+    width: 100%;
+    text-align: center
+}
+.notice{
+    width: 6.98rem;
+    margin: 0.25rem auto ;
+    background: #F4F4F4;
+    border-radius: .32rem;
+   height: .64rem;
+   font-size: .24rem;
+   color: #3E3E4D;
+   padding:0 .24rem
+}
+.notice img{
+  width: 1.26rem;
+  height: .3rem;
+}
+.notice p{
+    width:4.84rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.advertise{
+    width:100%;
+
+}
+.advertise img{
+    width: 3.75rem;
+    height: 1.7rem;
+}
+.invit img{
+    width: 7.3rem;
+    height: 2.36rem;
+}
+.listTit{
+    width: 100%;
+    font-size: .32rem;
+    color: #3E3E4D
+}
+.listTit h3{
+    text-align: center
+}
+.listTit-p{
+    text-align: center;
+    font-size: .18rem;
+    color: #CBCDD6;
+    font-weight: bold;
+    margin-bottom: .24rem
+}
+.listBox{
+    width: 100%;
+    background: #fff;
+    padding: 0 .25rem;
+    justify-content: space-between
+   }
+   .listBoxLeft,.listBoxRight{
+       flex-direction: column
+   }
+   .listItem{
+       width: 3.44rem;
+       font-size: .32rem;
+       color: #3E3E4D;
+       margin-bottom: .25rem;
+   }
+   .listItem img{
+       width: 100%;
+       height: 4.58rem;
+   }
+   .listItem-cont{
+       width: 100%;
+       padding: .12rem .2rem .2rem
+   }
+   .item-tit{
+       font-size: .32rem;
+       color: #3E3E4D;
+       overflow: hidden;
+       display: -webkit-box;
+       -webkit-box-orient: vertical;
+       -webkit-line-clamp: 2;
+   }
+   .item-tit2{
+       font-size: .32rem;
+       color: #3E3E4D;
+       overflow: hidden;
+       white-space: nowrap;
+       text-overflow: ellipsis;
+   }
+   /* .goodTit{
+       font-size: .32rem;
+       color: #3E3E4D;
+       white-space: nowrap;
+       text-overflow: ellipsis;
+       overflow: hidden;
+       font-weight:bold;
+       margin-bottom: .06rem
+   }
+   .goodTitd{
+       font-size: .24rem;
+       color: #3E3E4D;
+       display: -webkit-box;
+       -webkit-box-orient: vertical;
+       -webkit-line-clamp: 2;
+       overflow: hidden;
+       margin-bottom: .5rem
+   } */
+   .item-fx{
+       padding:0.05rem .1rem;
+       font-size: .22rem;
+       color: #FF6715;
+       border:.01rem solid #FF6715;
+       border-radius: .08rem;
+       display: inline;
+       font-weight: bold
+   }
+   .item-price{
+       align-items: center;
+       color: #FF6715;
+       font-weight: bold;
+       font-size: .24rem
+   
+   }
+   .item-priceP {
+       margin-left: .1rem
+   }
+   .item-priceP span{
+       font-size: .32rem
+   }

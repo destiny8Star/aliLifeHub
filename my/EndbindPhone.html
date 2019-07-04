@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>填写手机号</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/bindPhone.css">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+</head>
+
+<body>
+    <img src="../img/BANNER@2x.png" class="bp-img" alt="">
+    <section class="ck-box">
+        <div class="ck-item flex">
+            <span>手机号</span>
+            <input type="number" maxlength="11" name="cPhone" class="ck-phone" placeholder="请输入手机号">
+            <button class="btn-yzm">获取验证码</button>
+        </div>
+        <div class="ck-item flex">
+            <span>验证码</span>
+            <input type="number" class="ck-input" name="cCode" placeholder="请输入验证码" maxlength="6">
+        </div>
+
+    </section>
+    <!-- //确定框 -->
+    <div class="ck-btn">
+        <button class="weui-btn weui-btn_zf">确认</button>
+    </div>
+</body>
+<script src="../js/public.js"></script>
+<script src="../js/flexible.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+
+<script>
+    let openId = localStorage.getItem("openid")
+    console.log("o111", openId)
+        //获取店铺id
+
+    var storeUserId = getUrlParms("storeUserId");
+    console.log('storeUserId', storeUserId)
+
+
+    //获取验证码
+    function getPCode(mobile) {
+        let timestamp = getTimes()
+        $.ajax({
+            url: baseUrl + "/api/third/smsCode",
+            method: "POST",
+            data: {
+                mobile: mobile,
+                timestamp: timestamp,
+                deviceType: "3"
+            },
+            dataType: "json",
+            success: function(res) {
+                console.log("code", res)
+            }
+        })
+    }
+
+    $(".btn-yzm").click(function() {
+            let mobile = $("input[name='cPhone']").val()
+            if (mobile) {
+                let num = 60;
+                $(this).addClass("btn-yzmN").attr("disabled", "true").text("重新获取 (" + num + "S)")
+                let intTime = setInterval(function() {
+                    num--;
+                    if (num > 0) {
+                        $(".btn-yzm").text("重新获取 (" + num + "S)")
+
+                    } else {
+                        clearInterval(intTime)
+                        num = 0;
+                        $(".btn-yzm").removeClass("btn-yzmN").removeAttr("disabled").text("获取验证码")
+                    }
+
+                }, 1000)
+                getPCode(mobile)
+            } else {
+                $.toast("请输入手机号", "forbidden");
+            }
+        })
+        // 点击确认
+    $(".weui-btn_zf").click(function() {
+        let Cphone = $("input[name='cPhone']").val()
+        let Ccode = $("input[name='cCode']").val()
+        let timestamp = getTimes()
+        console.log(Cphone, Ccode)
+        if (Cphone && Ccode) {
+            $.showLoading("加载中");
+            $.ajax({
+                url: baseUrl + "/api/third/bindOpenidAndUser",
+                method: "POST",
+                data: {
+                    openid: openId,
+                    timestamp: timestamp,
+                    deviceType: "3",
+                    mobile: Cphone,
+                    mobileAuthCode: Ccode,
+                    storeUserId: storeUserId
+                },
+                dataType: "json",
+                success: function(res) {
+                    $.hideLoading();
+                    console.log("绑定结果", res)
+                    if (res.code == 200) {
+                        $.toast("绑定成功", function() {
+                            // history.back(-1)
+                            window.location.href= serUrl + "/business/payEnding.html"
+                        })
+                    } else {
+                        $.toast("绑定失败", "cancel")
+                    }
+                }
+            })
+        } else {
+            $.toast("请输入完整", "forbidden")
+        }
+    })
+</script>
+
+</html>

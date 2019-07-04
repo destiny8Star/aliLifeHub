@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+        content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>商户列表</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <script>
+        let t0 = new Date().getTime()
+        document.write('<link rel="stylesheet" href="../css/business.css?t=' + t0 + '">')
+    </script>
+    <link rel="stylesheet" href="../css/refresh.css">
+</head>
+
+<body>
+    <!-- 顶部搜索栏 -->
+    <section class="bus-top flex_bet">
+        <div class="input flex_bet"><img src="../img/SS.png" alt=""> <input type="text" placeholder="搜索商铺" disabled>
+        </div>
+    </section>
+    <!-- 下拉刷新上拉加载大框 -->
+    <div class="content"
+        style="background-color: #FFFFFF; width: 100%;height:97%; margin-top: 0.4rem;position: absolute; padding:0px; overflow: hidden;-webkit-overflow-scrolling:touch">
+        <div class="list-main-mian weui-form-preview infinite weui-pull-to-refresh" id="listwrap"
+            style="height:100%; margin-top: 1px;overflow:auto;  z-index: 1">
+            <!--下拉刷新-->
+            <div class="weui-pull-to-refresh__layer" style="padding: 5px;">
+                <div class="weui-pull-to-refresh__arrow"></div>
+                <div class="weui-pull-to-refresh__preloader"></div>
+                <div class="down">下拉刷新</div>
+                <div class="up">释放刷新</div>
+                <div class="refresh">正在刷新</div>
+            </div>
+            <div class="weui-form-preview" id="Tolist">
+                <!--内容展示区域-->
+
+                <!-- 商店 -->
+                <section class="bus-store">
+                </section>
+                <!-- //没有更多数据 -->
+                <div class="noPic"><img src="../img/tub.png" alt=""></div>
+                <div class="weui-cells__titleno">空空如也，什么都没有哦~</div>
+                <div class="weui-cells__title">无更多数据</div>
+            </div>
+            <div class="weui-loadmore">
+                <i class="weui-loading"></i>
+                <span class="weui-loadmore__tips">正在加载</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let t = new Date().getTime()
+    document.write('<script src="../js/libs/require.js" data-main="../js/busList.js?t=' + t + '"><\/script>')
+</script>
+</html>

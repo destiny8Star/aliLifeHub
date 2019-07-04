@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>个人中心</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/myInfo.css">
+</head>
+
+<body>
+  <section class="info">
+      <div class="head flex_bet">
+          头像<img src="../img/toux.png" alt="" class="headImg">
+      </div>
+      <div class="info-cont flex_bet">
+          等级<span></span>
+      </div>
+      <div class="info-cont flex_bet">
+        昵称<span></span>
+    </div>
+    <div class="info-cont flex_bet">
+        账户 <div><span id="account"></span> <span style="cursor: pointer" onclick="" class="copy" data-clipboard-target="#account">复制</span></div> 
+    </div>
+    <div class="info-cont flex_bet">
+        实名认证<span></span>
+    </div>
+    <div class="info-cont flex_bet">
+        我的邀请人<span></span>
+    </div>
+    <div class="info-cont flex_bet">
+        交易密码<a href="changeKey.html"> <span>设置密码<span class="row">></span></span></a>
+    </div>
+  </section>
+
+</body>
+<script>
+    let t = new Date().getTime()
+    document.write('<script src="../js/libs/require.js" data-main="../js/myInfo.js?t=' + t + '" ><\/script>')
+</script>
+<!-- <script src="../js/public.js"></script>
+<script src="../js/flexible.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+<script src="../js/setWx-config.js"></script>
+<script src="../js/clipboard.min.js"></script> -->
+</html>

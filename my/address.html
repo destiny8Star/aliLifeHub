@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>收货地址</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/address.css">
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <section class="add-item">
+        <div class="add-item-tit flex">
+            <h5>卡贝基</h5>
+            <span>15789874521</span>
+        </div>
+        <p class="add-item-woc">浙江省杭州市萧山区民和路58号保亿中心A座1702室</p>
+        <div class="add-item-bot flex_bet">
+            <div class="add-item-bot-left flex_cen"><img src="../img/yixuan.png" alt="">已设为默认</div>
+            <dvi class="add-item-bot-right flex_bet">
+                <div class="add-item-bot-edit flex_cen"><img src="../img/bianji.png" alt="">编辑</div>
+                <div class="add-item-bot-del flex_cen"><img src="../img/shanchu.png" alt="">删除</div>
+            </dvi>
+        </div>
+    </section>
+    <section class="add-item">
+        <div class="add-item-tit flex">
+            <h5>卡贝基</h5>
+            <span>15789874521</span>
+        </div>
+        <p class="add-item-woc">浙江省杭州市萧山区民和路58号保亿中心A座1702室</p>
+        <div class="add-item-bot flex_bet">
+            <div class="add-item-bot-left flex_cen"><img src="../img/weixuan.png" alt="">设为默认</div>
+            <dvi class="add-item-bot-right flex_bet">
+                <div class="add-item-bot-edit flex_cen"><img src="../img/bianji.png" alt="">编辑</div>
+                <div class="add-item-bot-del flex_cen"><img src="../img/shanchu.png" alt="">删除</div>
+            </dvi>
+        </div>
+    </section>
+    <!-- //添加收货地址 -->
+    <a href="addAddress.html">
+        <section class="add-address weui-btn weui-btn_zf"><img src="../img/jiahao.png" alt=""> 添加收货地址</section>
+    </a>
+</body>
+<script src="../js/flexible.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+<script>
+    $(".add-item-bot-left").click(function() {
+        // console.log()
+        $(".add-item-bot-left").html('<img src="../img/weixuan.png" alt="">设为默认')
+        $(this).html('<img src="../img/yixuan.png" alt="">已设为默认')
+
+    })
+    $(".add-item-bot-del").click(function() {
+        // $.confirm("确定删除吗", function() {
+        //     //点击确认后的回调函数
+        //     $.toast("删除成功!")
+        // }, function() {
+        //     //点击取消后的回调函数
+        //     $.toast("已经取消")
+        // });
+        $.modal({
+            title: "",
+            text: "是否删除此收货地址",
+            buttons: [{
+                text: "是",
+                onClick: function() {
+                    console.log(2)
+                }
+            }, {
+                text: "否",
+                className: "default",
+                onClick: function() {
+                    console.log(3)
+                }
+            }, ]
+        });
+
+    })
+</script>
+
+</html>

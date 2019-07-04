@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>商品详情</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/searchCont.css">
+    <link rel="stylesheet" href="../css/refresh.css">
+</head>
+
+<body>
+  <!-- 下拉刷新上拉加载大框 -->
+  <div class="content" style=" width: 100%;height:95%;position: absolute; padding:0px; overflow: hidden;">
+        <div class="list-main-mian weui-form-preview infinite weui-pull-to-refresh" id="listwrap" style="height:100%; margin-top: 1px;background:#f8f8f8;overflow:auto;  z-index: 1">
+            
+            <div class="weui-form-preview" id="Tolist">
+                <!--内容展示区域-->
+               <!-- 顶部 -->
+            <section class="top">
+                <input type="text" placeholder="搜索" class="inputbox">
+            </section>
+            <!-- tabbar -->
+            <section class="tab flex_aro">
+                <div class="tab-item sel">综合</div>
+                <div class="tab-item flex_cen">价格<img src="../img/JG.png" alt=""></div>
+                <div class="tab-item flex_cen">销量<img src="../img/JG.png" alt=""></div>
+                <div class="tab-item">新品</div>
+            </section>
+            <!-- 商品列表 -->
+            <section class="listBox flex">
+                <div class="listBoxLeft flex">
+                    <a href="mallDetail.html">
+                        <div class="listItem">
+                            <img src="../img/XQt.png" alt="">
+                            <div class="listItem-cont">
+                                <h3 class="item-tit">商品标题商品标题商品标题商品标题商品标商品标题商</h3>
+                                <p class="item-fx">返现19元</p>
+                                <div class="item-price flex">
+                                    <span>PLUS价</span>
+                                    <div class="item-priceP">￥<span>88.88</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="listItem">
+                        <img src="../img/XQt.png" alt="">
+                        <div class="listItem-cont">
+                            <h3 class="item-tit">商品标题商品标题商品标题商品标题商品标商品标题商</h3>
+                            <p class="item-fx">返现19元</p>
+                            <div class="item-price flex">
+                                <span>PLUS价</span>
+                                <div class="item-priceP">￥<span>88.88</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="listItem">
+                        <img src="../img/XQt.png" alt="">
+                        <div class="listItem-cont">
+                            <h3 class="item-tit">商品标题商品标题商品标题商品标题商品标商品标题商</h3>
+                            <p class="item-fx">返现19元</p>
+                            <div class="item-price flex">
+                                <span>PLUS价</span>
+                                <div class="item-priceP">￥<span>88.88</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="listBoxRight">
+                    <div class="listItem">
+                        <img src="../img/XQt.png" alt="">
+                        <div class="listItem-cont">
+                            <h3 class="item-tit2">商品标题商品标题商品标题商品标题商品标商品标题商</h3>
+                            <p class="item-fx">返现19元</p>
+                            <div class="item-price flex">
+                                <span>PLUS价</span>
+                                <div class="item-priceP">￥<span>88.88</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="listItem">
+                        <img src="../img/XQt.png" alt="">
+                        <div class="listItem-cont">
+                            <h3 class="item-tit2">商品标题商品标题商品标题商品标题商品标商品标题商</h3>
+                            <p class="item-fx">返现19元</p>
+                            <div class="item-price flex">
+                                <span>PLUS价</span>
+                                <div class="item-priceP">￥<span>88.88</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+           
+            <!-- //没有更多数据 -->
+            <div class="weui-cells__title show-more">已无更多数据</div>
+            </div>
+            <!-- style="padding-bottom:30px;height:20px" -->
+            <div class="weui-loadmore">
+                <i class="weui-loading"></i>
+                <span class="weui-loadmore__tips">正在加载</span>
+            </div>
+        </div>
+    </div>
+
+ 
+</body>
+<script src="../js/public.js"></script>
+<script src="../js/flexible.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+<script>
+    let Pflag="toUp"; //设置价格排序
+    let Sflag="toUp";//设置销量排序
+       $(".tab-item").click(function(){
+           let ind=$(this).index()
+           console.log("ind",ind)
+           $(".tab-item").removeClass("sel").eq(ind).addClass("sel") //设置字体样式
+           $(".flex_cen").children("img").attr("src","../img/JG.png")//去掉排序样式
+           if(ind==1){
+               if(Pflag=="toUp"){
+                $(".tab-item").eq(ind).children("img").attr("src","../img/JX-yixuan.png")
+                Pflag="toBot"
+               }else{
+                $(".tab-item").eq(ind).children("img").attr("src","../img/SX-yixuan.png")   
+                Pflag="toUp";
+               }
+           }
+           if(ind==2){
+               if(Sflag=="toUp"){
+                $(".tab-item").eq(ind).children("img").attr("src","../img/JX-yixuan.png")
+                Sflag="toBot"
+               }else{
+                $(".tab-item").eq(ind).children("img").attr("src","../img/SX-yixuan.png")   
+                Sflag="toUp";
+               }
+           }
+       })
+
+       var pages = 1;
+        var sizes = 4;
+        var loading = false; //状态标记
+        $(function() {
+                loadlist();
+            })
+          //============================滚动加载
+    $("#listwrap").infinite().on("infinite", function() {
+        if (loading) return;
+        loading = true;
+        pages++; //页数
+        $(".weui-cells__title").removeClass("show-more")
+        $('.weui-loadmore').show();
+        setTimeout(function() {
+            loadlist();
+            loading = false;
+        }, 2500); //模拟延迟
+    });
+    // =======加载数据loadlist();
+    function loadlist() {
+        var html = "";
+        $.ajax({
+            type: "POST",
+            url: "/Index/Index",
+            data: {
+                'page': pages,
+                'size': sizes
+            },
+            dataType: "json",
+            error: function(request) {
+                $(".weui-loadmore").hide();
+                // html += "<div class=\"weui-cells__title\" >已无更多数据</div>";
+                // $("#Tolist").append(html);
+                $(".weui-cells__title").addClass("show-more")
+            },
+            success: function(data) {
+                if (data.List.length > 0) {
+                    for (var i = 0; i < data.List.length; i++) {
+                        html += ' <div class="weui-form-preview__bd"> ';
+                        html += ' <div class="weui-form-preview__item"> ';
+                        html += ' <label class="weui-form-preview__label">' + data.List[i].Name + '</label> ';
+                        html += ' </div> ';
+                        html += ' </div> ';
+                    }
+                    $("#Tolist").append(html);
+                } else {
+                    $(".weui-cells__title").addClass("show-more")
+                    loading = true;
+                }
+                $(".weui-loadmore").hide();
+            }
+        });
+    }    
+</script>
+</html>

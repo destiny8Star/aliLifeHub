@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>我的</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/my.css">
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <section class="my-top">
+        <div class="my-top-tit">
+            <a href="my/myInfo.html"><img src="img/toux.png" alt="" class="headpic"></a>
+            <h4>昵称</h4>
+            <div class="my-top-tit-type flex_cen">等级</div>
+        </div>
+        <div class="my-top-mon flex_bet">
+            <div class="my-top-mon-item">
+                <h5>0.00</h5>
+                <p class="mon-sun">累计收益(元)</p>
+            </div>
+            <div class="my-top-mon-min"></div>
+            <div class="my-top-mon-item">
+                <h5>0.00</h5>
+                <p class="mon-sun">余额(元)</p>
+            </div>
+        </div>
+        <div class="my-top-bot">
+            <div class="my-top-bot-tit flex_bet">
+                <div class="my-top-bot-tit1">我的订单</div>
+                <div class="my-top-bot-tit2 flex_cen">全部订单<img src="img/jiantou.png" alt=""></div>
+            </div>
+            <div class="my-top-bot-cont flex_aro">
+                <div class="my-top-bot-cont-item">
+                    <img src="img/dfh.png" alt="">
+                    <p class="my-top-bot-cont-itemP">待发货</p>
+                </div>
+                <div class="my-top-bot-cont-item">
+                    <img src="img/sh.png" alt="">
+                    <p class="my-top-bot-cont-itemP">待收货</p>
+                </div>
+                <div class="my-top-bot-cont-item">
+                    <img src="img/ysh.png" alt="">
+                    <p class="my-top-bot-cont-itemP">已收货</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 中间下载链家 -->
+    <section class="my-imgA">
+        <a href="my/down.html"><img src="img/banner.png" alt=""></a>
+    </section>
+    <!-- 分类内容 -->
+    <section class="my-content flex_bet">
+         <a href="my/down.html">
+            <div class="my-cont-item">
+                <img src="img/vip.png" alt="">
+                <p>VIP中心</p>
+            </div>
+        </a>
+        <!-- <a href="my/address.html">
+            <div class="my-cont-item">
+                <img src="img/jaioyi.png" alt="">
+                <p>收货地址</p>
+            </div>
+        </a> -->
+        <a href="my/tradeDetail.html">
+            <div class="my-cont-item">
+                <img src="img/jiaoyi.png" alt="">
+                <p>交易明细</p>
+            </div>
+        </a>
+        <a href="my/about.html">
+            <div class="my-cont-item">
+                <img src="img/guanyu.png" alt="">
+                <p>关于我们</p>
+            </div>
+        </a>
+
+    </section>
+    <!-- 底部tabar -->
+    <div class="weui-tabbar">
+        <!-- <a href="index.html" class="weui-tabbar__item ">
+            <div class="weui-tabbar__icon">
+                <img src="./img/SC-WX.png" alt="">
+            </div>
+            <p class="weui-tabbar__label">商城</p>
+        </a> -->
+        <a href="business.html" class="weui-tabbar__item">
+            <div class="weui-tabbar__icon">
+                <img src="./img/SQ-WX.png" alt="">
+            </div>
+            <p class="weui-tabbar__label">商圈</p>
+        </a>
+        <a href="javascript:;" class="weui-tabbar__item weui-bar__item--on">
+            <div class="weui-tabbar__icon">
+                <img src="./img/WD-YX.png" alt="">
+            </div>
+            <p class="weui-tabbar__label">我的</p>
+        </a>
+    </div>
+    <!-- //显示去绑定 -->
+    <div class="mask">
+        <div class="mask-box">
+            <h3>提示</h3>
+            <p>请先绑定手机号</p>
+            <div class="toBind">去绑定</div>
+        </div>
+    </div>
+</body>
+<script>
+    let t = new Date().getTime()
+    document.write('<script src="js/libs/require.js" data-main="js/my.js?t=' + t + '"><\/script>')
+</script>
+<!-- <script src="js/apps/public.js"></script>
+<script src="js/apps/setWx-config.js"></script>
+<script src="js/apps/flexible.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script> -->
+</html>

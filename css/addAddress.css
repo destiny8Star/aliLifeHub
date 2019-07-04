@@ -1,0 +1,153 @@
+body,
+html {
+    background: #fff
+}
+
+.addAd {
+    width: 100%;
+    padding-top: .2rem;
+    font-size: .28rem;
+    color: #3E3E4D;
+}
+
+.add-name {
+    width: 100%;
+    border-bottom: .01rem solid #CBCDD6;
+    padding: .4rem .6rem;
+    align-items: center
+}
+
+input {
+    outline: none;
+    padding-left: .7rem;
+    border: 0;
+    font-size: .28rem
+}
+
+input::-webkit-input-placeholder {
+    color: #909090;
+}
+
+input::-moz-placeholder {
+    color: #909090;
+}
+
+input:-ms-input-placeholder {
+    color: #909090;
+}
+
+.add-detail {
+    padding-left: 0;
+    width: 100%
+}
+
+
+/* .confirm {
+    color: #FFB715 !important;
+}
+
+.picker .picker-panel .picker-choose {
+    font-size: .32rem !important;
+}
+
+.picker .picker-panel .picker-choose .cancel,
+.picker .picker-panel .picker-choose .confirm {
+    padding: .3rem !important
+}
+
+.picker .picker-panel {
+    height: 5rem !important;
+} */
+
+.add-name img {
+    width: .18rem;
+    height: .18rem;
+    margin-left: .2rem
+}
+
+span {
+    font-weight: bolder
+}
+
+.addAd-btn,
+.sel-btn {
+    position: absolute;
+    bottom: 1.2rem;
+    left: 0;
+    width: 100%;
+    padding: 0 .6rem
+}
+
+.sel-btn {
+    bottom: 0.8rem;
+}
+
+.weui-btn_ad {
+    background: rgba(255, 183, 21, .5)
+}
+
+.weui-btn_zf {
+    background: rgba(255, 183, 21, 1)
+}
+
+
+/* 选择城市 */
+
+.selTop {
+    width: 100%;
+    height: 1.04rem;
+    border-bottom: .02rem solid #EDEDED;
+    padding-top: .4rem;
+    font-size: .32rem;
+    color: #3E3E4D
+}
+
+.sel-tit {
+    height: 100%;
+    margin: 0 .14rem 0 .26rem;
+    display: inline-block
+}
+
+.selTit {
+    border-bottom: 0.02rem solid #FFB715;
+}
+
+.selCont {
+    width: 100%;
+    padding: .2rem .45rem;
+    height: 10rem;
+    overflow-y: scroll;
+    font-size: .28rem;
+    color: #3E3E4D
+}
+
+.selCont::-webkit-scrollbar {
+    display: none;
+}
+
+.selCont-item {
+    width: 100%;
+    margin-bottom: .32rem;
+    display: flex;
+    align-items: center
+}
+
+.sel-img {
+    width: .26rem;
+    height: .26rem;
+    margin-left: .2rem;
+    display: none
+}
+
+.sel {
+    color: #FFB715;
+    display: inline-block;
+}
+
+.titHide {
+    visibility: hidden;
+}
+
+.contHide {
+    display: none;
+}

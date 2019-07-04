@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>店家收款</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/payment.css">
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <section class="pay-top">
+        <div class="pay-tit flex">
+            <!-- <img src="../img/DP.png" alt="">叶小天的店 -->
+        </div>
+        <div class="pay-bot flex">
+            <h2 class="pay-bot-y">￥</h2><input class="m-input"  placeholder="请输入金额" type="number" step="0.01">
+        </div>
+    </section>
+    <!-- 底部 -->
+    <section class="pay-bott">
+        <button class="weui-btn">确认金额</button>
+    </section>
+</body>
+<script>
+    let t = new Date().getTime()
+    document.write('<script src="../js/libs/require.js" data-main="../js/payment.js?t=' + t + '" ><\/script>')
+</script>
+<!-- <script src="../js/libs/require.js" data-main="../js/payment"></script> -->
+<script>
+</script>
+</html>

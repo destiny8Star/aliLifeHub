@@ -1,0 +1,42 @@
+body,html{
+    background: #f8f8f8
+}
+.info{
+    width: 100%;
+    background: #fff;
+    padding:0 0.3rem;
+    font-size: .32rem;
+    color: #3E3E4D;
+    font-weight: bold
+}
+.head{
+    width: 100%;
+    padding:.15rem 0;
+    border-bottom: .01rem solid #f2f2f2
+}
+.head img{
+    width: .99rem;
+    height: .99rem;
+    border-radius: 50%
+}
+.info-cont {
+    width: 100%;
+    height: .96rem;
+    border-bottom: .01rem solid #f2f2f2
+}
+.info-cont span{
+    font-size: .28rem;
+    font-weight:100;
+}
+.copy{
+    font-size: .2rem;
+    border:.01rem solid #909090;
+    color: #909090;
+    border-radius: .16rem;
+    padding:0 .05rem
+}
+.row{
+   color:#CBCDD6;
+   font-size: .34rem!important;
+   margin-left: .2rem
+}

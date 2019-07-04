@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>搜索</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+
+<body>
+    <!-- //头部框 -->
+<section class="head flex_bet">
+   <input type="text" placeholder="请输入店铺名称" class="inputs">
+   <span>搜索</span>
+</section>
+<!-- 搜索历史 -->
+<section class="history">
+    <h4>历史记录</h4>
+    <p class="item">充电器</p>
+    <p class="item">无线鼠标充电器</p>
+    <p class="item">无线充电器</p>
+    <p class="item">手机充电器</p>
+    <p class="item">电脑充电器</p>
+    <p class="item">主机</p>
+    <p class="item">无线鼠标充电器</p>
+    <p class="item">无线充电器</p>
+    <p class="item">手机充电器</p>  
+    <p class="item">电脑充电器</p>
+</section>
+
+
+</body>
+<script src="../js/public.js"></script>
+<script src="../js/flexible.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
+<script>
+  $("span").click(function(){
+      let val=$("input").val()
+      if(val){
+        getShop(val)
+      }else{
+          $.toast("请输入内容","forbidden")
+      }
+  })
+   function getShop(val){
+      $.ajax({
+        type: "POST",
+            url: baseUrl+"/api/third/Mall/list",
+            data: {
+                timestamp:"1",
+                deviceId:"1",
+                appVersion:"1",
+                deviceType:"1",
+                phoneSystemVersion:"1",
+                storeName:val
+            },
+            dataType: "json",
+            success: function(res) {
+                $.hideLoading();
+              console.log("获取商铺信息",res)
+              if(res.code==200){
+                  if(res.data.data.length>0){
+
+                  }else{
+                    $.toast("没有搜索到商家","forbidden")
+                  }
+              }else{
+                  $.toast("网络错误","forbidden")
+              }
+            }
+      })
+   }
+</script>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+        content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <title>确认支付</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/selPay.css">
+</head>
+
+<body>
+    <!-- 顶部 -->
+   <section class="selTop">
+       <p class="selTop-tit">支付金额</p>
+       <span class="selTop-mon flex">￥<h1>00.00</h1></span>
+       <span class="selTop-bot">账户余额(￥00.00)</span>
+   </section>
+   <!-- 中间输入框 -->
+   <section class="selMin flex_bet">
+        <input type="number" class="dk" placeholder="可抵扣0.00元">
+        <span class="allMon">全部抵用</span>
+   </section>
+    <!-- 底部 -->
+    <section class="pay-bott">
+        <div class="pay-bot-tit">选择其他支付<span class="pay-bot-titM">(剩余应支付¥0.00)</span></div>
+        <div class="pay-bot-item2 flex_bet">
+            <div class="pay-bot-itema flex_bet">
+                <img src="../img/zfb.png" alt="">
+                <h5>支付宝</h5>
+            </div>
+            <div class="pay-type"><img src="../img/GX-yixuan.png" alt=""></div>
+        </div>
+        <button class="weui-btn weui-btn_zf">确认支付</button>
+    </section>
+    <!-- 弹框支付 show-mask -->
+    <section class="mask">
+        <div class="mask-box">
+            <p class="mask-box-tit">请输入交易密码</p>
+            <p class="mask-cancel">取消</p>
+            <div class="input-box">
+                <input class="key-inp" type="password" maxlength="6" />
+                <ul class="pwd-wrap">
+                    <li><i></i></li>
+                    <li><i></i></li>
+                    <li><i></i></li>
+                    <li><i></i></li>
+                    <li><i></i></li>
+                    <li><i></i></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- 绑定手机号弹框 -->
+    <section class="bindPhone">
+        <div class="bindPhone-box">
+            <div class="bind-phone flex">手机号<input type="number" class="phone" placeholder="请输入手机号" name="phone"></div>
+            <div class="bind-phone flex">
+                验证码
+                <input type="number" class="codeB" placeholder="请输入验证码" name="codeB">
+                <div class="bnt-code">获取验证码</div>
+            </div>
+            <button class="weui-btn weui-btn_co">确认</button>
+            <div class="cancelB">X</div>
+        </div>
+    </section>
+</body>
+<!-- <script src="../js/libs/require.js" data-main="../js/selPay"></script> -->
+<script>
+    let t = new Date().getTime()
+    document.write('<script src="../js/libs/require.js" data-main="../js/selPay.js?t=' + t + '" ><\/script>')
+</script>
+</html>

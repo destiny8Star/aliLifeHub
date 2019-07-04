@@ -1,0 +1,173 @@
+ html,body{
+        width: 100%;
+        height: 100%;
+    }
+   .hb,.hbPhone{
+       width: 100vw;
+       height: 100vh;
+       background: rgba(0,0,0,0.6);
+       position: relative;
+       padding-top: .9rem;
+   }
+   .hbPhone{
+       display: none
+   }
+   .hbBg{
+       width: 6.91rem;
+       height: 10.68rem;
+       margin:0 auto;
+   }
+   .hbBtn{
+       width: 2.82rem;
+       height: 2.92rem;
+       position: absolute;
+       top: 4.7rem;
+       left: 0;
+       right: 0;
+       margin: auto
+   }
+   .bindPhone-box{
+        box-shadow:0px .24px .33px .02px rgba(235,25,47,1);
+        width: 6.02rem;
+        height: 3.92rem;
+        position: absolute;
+        top: 3.6rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: .24rem;
+        background: #fff;
+        padding:.4rem
+    }
+    .bind-phone{
+        width: 100%;
+        padding:.15rem 0;
+        border-bottom: .02rem solid #CBCDD6;
+        font-size: .3rem;
+        color: #3E3E4D;
+        align-items: center;
+        margin-top: .1rem
+
+    }
+    .phone,.codeB{
+        font-size: .3rem;
+        color: #3E3E4D;
+        padding:0 .3rem;
+        outline: none;
+        border: 0;
+        width: 4rem
+    }
+    .codeB{
+        flex: 1;
+        width: 2rem;
+    }
+    .bnt-code,.btn-yzmN{
+        width:  1.78rem;
+        height:.48rem;
+        border:.02rem solid #E53607;
+        border-radius:.24rem;
+        text-align: center;
+        line-height: .44rem;
+        color: #E53607;
+        font-size: .22rem
+    }
+    .btn-yzmN{
+        border:.02rem solid #3E3E4E;
+        color: #3E3E4E
+    }
+    .weui-btn_co{
+        width: 5.3rem;
+        margin-top: .4rem;
+        background: none;
+        color: #BC2617;
+        background-image: url("../img/sy.png");
+        background-size: cover;
+        background-position: center;
+        font-weight: bold
+    }
+    .getHb{
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        /* background-image: url("../img/bj.png");
+        background-size: cover;
+        background-position: top;
+        overflow: hidden; */
+        display: none;
+    
+    }
+    .bgGethb{
+        width: 100%;
+        height: 100%;
+        /* position: fixed;
+        top:0;
+        left:0;
+        z-index: -1; */
+    }
+    .Hb_cont{
+        width: 6.49rem;
+        height: 6.98rem;
+        position: absolute;
+        top: 4.95rem;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background: url("../img/lqHb.png");
+        background-size: cover
+    }
+
+    /* .getMon{
+        text-align: center;
+        color: #FF4526;
+        font-size: .48rem;
+        margin-top: 6.5rem;
+        margin-bottom: 1.56rem
+    }
+    .y{
+        font-size: .74rem
+    }
+    .goUse,.goDown{
+        width: 4.3rem;
+        height: 1.02rem;
+        background-image: url("../img/sy.png");
+        margin:0 auto ;
+        font-size: .3rem;
+        color: #BC2617;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        line-height: 1.02rem;
+        font-weight: bold
+    } */
+    .getMon{
+        text-align: center;
+        color: #FF4526;
+        font-size: .48rem;
+        margin-top: 1.7rem;
+        margin-bottom: 1.4rem;
+        position: relative;
+    }
+    .LQ{
+        width: .72rem;
+        height: .26rem;
+        position: absolute;
+        top: -0.16rem;
+        right: -0.72rem;
+    }
+    .y{
+        font-size: .74rem;
+        position: relative;
+    }
+    .goUse,.goDown{
+        width: 4.3rem;
+        height: 1.02rem;
+        background-image: url("../img/sy.png");
+        margin:0 auto ;
+        font-size: .3rem;
+        color: #BC2617;
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        line-height: 1.02rem;
+        font-weight: bold
+    }

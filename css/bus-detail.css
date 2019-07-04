@@ -1,0 +1,62 @@
+html,
+body {
+    background: #f8f8f8
+}
+
+.content {
+    width: 100%;
+    padding: .4rem;
+    background: #fff;
+}
+
+h3 {
+    font-size: .32rem;
+    color: #3E3E4D;
+    margin-bottom: .3rem
+}
+
+h5 {
+    font-size: .26rem;
+    color: #3E3E4D;
+    margin-bottom: .26rem
+}
+
+.pic {
+    margin-bottom: .28rem;
+    border-bottom: .01rem solid #F4F4F4;
+    white-space: nowrap;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.pic::-webkit-scrollbar {
+    display: none;
+}
+
+.pic img {
+    width: 2.28rem;
+    height: auto;
+    max-height: 1.8rem;
+    margin-right: .15rem;
+    margin-bottom: .14rem;
+    display: inline;
+}
+
+.address {
+    width: 100%;
+    margin-bottom: .65rem
+}
+
+.address img {
+    width: .32rem;
+    height: .32rem;
+}
+
+.address span {
+    font-size: .24rem;
+    color: #3E3E4D;
+    width: 5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

@@ -1,0 +1,106 @@
+body,
+html {
+    background: #fff
+}
+
+.logo {
+    width: 100%;
+    margin: 2.9rem 0 3.7rem
+}
+
+.bot {
+    width: 3.83rem;
+    height: .51rem;
+    margin: 0 auto
+}
+
+.logo-img {
+    width: 1.45rem;
+    height: 1.45rem;
+    margin: 0 auto 0.1rem
+}
+
+.logo-woc {
+    width: 2.56rem;
+    height: 1.15rem;
+    margin: 0 auto
+}
+
+.down {
+    width: 100%;
+    margin-top: 40%;
+    align-items: center;
+    font-size: .32rem;
+    color: #3E3E4D;
+}
+.dow-left{
+     width: 1.77rem;
+    height: 2.15rem;
+    margin: 0 auto
+}
+
+.dow-right {
+     width: 2.8rem;
+    height: 1.12rem;
+    margin: .5rem auto
+}
+
+/* //交易明细 */
+
+.trade {
+    width: 7.12rem;
+    background: rgba(255, 255, 255, 1);
+    border: .02rem solid rgba(248, 248, 248, 1);
+    box-shadow: 0rem .02rem .05rem 0rem rgba(137, 137, 137, 0.1);
+    border-radius: .2rem;
+    margin: .16rem auto;
+    padding: .35rem .25rem
+}
+
+.trade-top {
+    color: #3E3E4D;
+    font-size: .3rem;
+    margin-bottom: .2rem
+}
+
+h4 {
+    font-size: .36re;
+}
+
+.Tbot-l {
+    font-size: .24rem;
+    color: #909090
+}
+
+.Tbot-l img {
+    width: .34rem;
+    height: .34rem;
+    margin-right: .15rem;
+}
+
+.Tbot-r {
+    font-size: .28rem;
+    color: #3E3E4D
+}
+
+.Tfile {
+    color: #FF0000
+}
+.hideBox{
+    display: none
+}
+.weui-cells__titleno{
+    width: 100%;
+    text-align: center;
+    font-size: .28rem;
+    color: #999;
+}
+.noPic{
+    width: 7.33rem;
+    margin:3rem auto .3rem;
+    height: 1.95rem;
+}
+.inputS{
+    font-size: .28rem;
+    color: #3E3E4D;
+}
