@@ -15,34 +15,13 @@
 <body>
     <!-- 顶部 -->
     <section class="selTop">
-        <div class="sel-tit selTit Tprovince">
-            请选择
-        </div>
-        <div class="sel-tit Tcity titHide">
-            请选择
-        </div>
-        <div class="sel-tit Tarea titHide">
-            请选择
-        </div>
+        <div class="sel-tit selTit Tprovince">请选择</div>
+        <div class="sel-tit Tcity titHide">请选择</div>
+        <div class="sel-tit Tarea titHide">请选择</div>
     </section>
     <!-- 动态获取区域 -->
     <section class="selCont">
-        <div class="selCont-item Sprovince">北京 <img src='../img/G.png' alt='' class="sel-img"></div>
-        <div class="selCont-item Sprovince">天津 <img src='../img/G.png' alt='' class="sel-img"></div>
-        <div class="selCont-item Sprovince">上海 <img src='../img/G.png' alt='' class="sel-img"></div>
-        <div class="selCont-item Sprovince">重庆 <img src='../img/G.png' alt='' class="sel-img"></div>
-        <div class="selCont-item Sprovince">山西 <img src='../img/G.png' alt='' class="sel-img"></div>
-        <div class="selCont-item Sprovince">山东 <img src='../img/G.png' alt='' class="sel-img"></div>
-        <div class="selCont-item Sprovince">广东 <img src='../img/G.png' alt='' class="sel-img"></div>
-        <div class="selCont-item Sprovince">广西 <img src='../img/G.png' alt='' class="sel-img"></div>
-        <div class="selCont-item Sprovince">香港 <img src='../img/G.png' alt='' class="sel-img"></div>
-        <div class="selCont-item Sprovince">澳门 <img src='../img/G.png' alt='' class="sel-img"></div>
-        <div class="selCont-item Sprovince">台湾 <img src='../img/G.png' alt='' class="sel-img"></div>
-        <div class="selCont-item Sprovince">北京 <img src='../img/G.png' alt='' class="sel-img"></div>
-        <div class="selCont-item Sprovince">天津 <img src='../img/G.png' alt='' class="sel-img"></div>
-        <div class="selCont-item Sprovince">上海 <img src='../img/G.png' alt='' class="sel-img"></div>
-        <div class="selCont-item Sprovince">重庆 <img src='../img/G.png' alt='' class="sel-img"></div>
-        <div class="selCont-item Sprovince">山西 <img src='../img/G.png' alt='' class="sel-img"></div>
+        <!-- <div class="selCont-item Sprovince">北京 <img src='../img/G.png' alt='' class="sel-img"></div> -->
     </section>
     <section class="selCont contHide"></section>
     <section class="selCont contHide"></section>
@@ -50,90 +29,8 @@
     <div class="sel-btn"><button class="weui-btn weui-btn_zf">保存地址</button></div>
 
 </body>
-<script src="../js/flexible.js"></script>
-<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
 <script>
-    let city = ["北平", "南京", "将随", "寒冬", "栗子", "清明", "北平", "南京", "将随", "寒冬", "栗子", "清明", "北平", "南京", "将随", "寒冬", "栗子", "清明", ]
-    let area = ["江干区", "篷布区", "小南区", "天干去", "地质区", "江干区", "篷布区", "小南区", "天干去", "地质区", "江干区", "篷布区", "小南区", "天干去", "地质区", ]
-        //点击上面
-    $(".sel-tit").click(function() {
-        let index = $(this).index()
-        console.log("top", index, $(".selCont").eq(index))
-        $(this).addClass("selTit").siblings().removeClass("selTit") //改变样式
-
-        $(".selCont").hide().eq(index).show()
-    })
-
-    // 点击选项
-    $(".Sprovince").click(function() {
-        let tit = $(this).text()
-        $(".Tprovince").text(tit)
-        $(".Sprovince").removeClass("sel").children("img").removeClass("sel") //去掉样式
-        $(this).addClass("sel").children("img").addClass("sel") //添加样式，显示对勾
-        $(".Tcity").text("请选择").removeClass("titHide").addClass("selTit").siblings().removeClass("selTit") //给头部修改样式
-        $(".Tarea").text("请选择")
-            // let str = ""
-            // city.forEach(function(e, i) {
-            //     str += "<div class='selCont-item Scity'>" + e + "<img src='../img/G.png' alt='' class='sel-img'></div>"
-            // })
-            // $(".selCont").hide().eq(1).html(str).show()
-        callBack(city, "Scity", 1)
-    })
-    $(".selCont").on("click", ".Scity", function() {
-        let tit = $(this).text()
-        $(".Tcity").text(tit)
-        $(this).siblings().removeClass("sel").children("img").removeClass("sel") //去掉样式
-        $(this).addClass("sel").children("img").addClass("sel") //添加样式，显示对勾
-        $(".Tarea").text("请选择").removeClass("titHide").addClass("selTit").siblings().removeClass("selTit") //给头部修改样式
-            // let str = ""
-            // area.forEach(function(e, i) {
-            //     str += "<div class='selCont-item Sarea'>" + e + "<img src='../img/G.png' alt='' class='sel-img'></div>"
-            // })
-            // $(".selCont").hide().eq(2).html(str).show()
-        callBack(area, "Sarea", 2)
-    })
-    $(".selCont").on("click", ".Sarea", function() {
-            let tit = $(this).text()
-            $(".Tarea").text(tit)
-            $(this).siblings().removeClass("sel").children("img").removeClass("sel") //去掉样式
-            $(this).addClass("sel").children("img").addClass("sel") //添加样式，显示对勾
-
-        })
-        //获取省市区
-    function getData(data, callBack) {
-        $.ajax({
-            url: baseUrl + "",
-            data: data,
-            method: "POST",
-            dataType: "json",
-            success: function(res) {
-                callBack(res)
-            }
-        })
-    }
-    //获取信息回调处理
-    function callBack(res, clName, ind) {
-        let str = ""
-        res.forEach(function(e, i) {
-            str += "<div class='selCont-item " + clName + "'>" + e + "<img src='../img/G.png' alt='' class='sel-img'></div>"
-        })
-        $(".selCont").hide().eq(ind).html(str).show()
-    }
-    $(".sel-btn").click(function() {
-        let pro = $(".Tprovince").text()
-        let cit = $(".Tcity").text()
-        let are = $(".Tarea").text()
-        let data = {
-            province: pro,
-            city: cit,
-            area: are
-        }
-        let city = JSON.stringify(data)
-        localStorage.setItem("city", city)
-
-        history.back()
-    })
+    let t = new Date().getTime()
+    document.write('<script src="../js/libs/require.js" data-main="../js/selCity.js?t=' + t + '"><\/script>')
 </script>
-
 </html>

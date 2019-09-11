@@ -79,7 +79,8 @@ span {
 }
 
 .sel-btn {
-    bottom: 0.8rem;
+    bottom: 0.5rem;
+    display: none
 }
 
 .weui-btn_ad {
@@ -99,13 +100,22 @@ span {
     border-bottom: .02rem solid #EDEDED;
     padding-top: .4rem;
     font-size: .32rem;
-    color: #3E3E4D
+    color: #3E3E4D;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .sel-tit {
     height: 100%;
     margin: 0 .14rem 0 .26rem;
-    display: inline-block
+    display: inline-block;
+    max-width: 2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .selTit {
@@ -113,12 +123,17 @@ span {
 }
 
 .selCont {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: .2rem .45rem;
-    height: 10rem;
+    padding: 1.24rem .45rem 1.5rem;
+    height: 100vh;
+    overflow: hidden;
     overflow-y: scroll;
     font-size: .28rem;
-    color: #3E3E4D
+    color: #3E3E4D;
+    -webkit-overflow-scrolling:touch
 }
 
 .selCont::-webkit-scrollbar {

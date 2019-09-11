@@ -37,6 +37,7 @@ requirejs(["jquery", "wui", "flex", "ajs", "public", "swx"], function ($, wui, f
             method: "POST",
             dataType: "json",
             success: function (res) {
+                ajs.hideLoading();
                 console.log("板顶结果", res)
                 if (res.code == 200) {
                     if (res.data == 1) {
@@ -73,7 +74,7 @@ requirejs(["jquery", "wui", "flex", "ajs", "public", "swx"], function ($, wui, f
             },
             dataType: "json",
             success: function (res) {
-                ajs.hideLoading();
+              
                 console.log("获取信息", res)
                 if (res.code == 200) {
                     let info = JSON.stringify(res.data)

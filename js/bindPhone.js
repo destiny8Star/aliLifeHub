@@ -76,7 +76,7 @@ require(["jquery", "wui", "flex", "ajs", "public", "swx",], function ($, wui, fl
         if (Cphone && Ccode) {
             ajs.showLoading("加载中");
             $.ajax({
-                url: baseUrl + "/api/third/bindOpenidAndUser",
+                url: public.baseUrl + "/api/third/bindOpenidAndUser",
                 method: "POST",
                 data: {
                     openid: openId,

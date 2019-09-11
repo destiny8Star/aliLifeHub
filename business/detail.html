@@ -9,35 +9,50 @@
     <title>店铺详情</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
     <link rel="stylesheet" href="../css/public.css">
-    <link rel="stylesheet" href="../css/bus-detail.css">
+    <script>
+        let t0 = new Date().getTime()
+        document.write('<link rel="stylesheet" href="../css/bus-detail.css?t=' + t0 + '">')
+    </script>
 </head>
 <body>
     <!-- 主内容 -->
     <section class="content">
         <h3></h3>
-        <h5>商铺照片</h5>
-        <div class="pic">
+        <div class="per"></div>
+        <!-- <h5>商铺照片</h5> -->
+        <div class="napo"><span class="napo-tit"></span><span class="lines"> | </span><span class="napo-po"></span></div>
+        <div class="pic flex">
+    
             <!-- <img src="../img/DP.png" alt=""> -->
+            <a href="detImg.html">
+                <div class="pic-more">查看全部<span class="pic-num">(0张)</span></div>
+            </a>
         </div>
         <div class="address flex_bet">
             <div class="add-left flex_aro">
                 <img src="../img/DW.png" alt="">
-                <span>地理位置</span>
+                <span class="add-detail">地址 |<span class="add-dis"> 距您<span class="add-dis-num">0m</span></span></span>
             </div>
-            <a href="tel:" class="phone"><div class="add-right"><img src="../img/DH.png" alt=""></div></a>
+            <!-- <a href="tel:" class="phone"> -->
+            <div class="add-right"><img src="../img/DH.png" alt=""></div>
+            <!-- </a> -->
         </div>
-        <a href="#" class="toPay"> <button class="weui-btn weui-btn_zf">付款</button></a>
+        <a href="#" class="toPay"> <button class="weui-btn weui-btn_zf">去买单</button></a>
     </section>
     <!-- 底部 -->
+    <!-- //拨打电话弹框 -->
+    <div class="mask">
+        <div class="maskbox">
+            <div class="maskphone" id="account"></div>
+            <div class="maskbtn">
+                 <div class="btn-cli btn-c">取消</div>
+                 <div class="btn-cli btn-s" style="cursor: pointer" data-clipboard-target="#account">复制</div>
+            </div>
+        </div>
+    </div>
 </body>
 <script>
     let t = new Date().getTime()
     document.write('<script src="../js/libs/require.js" data-main="../js/detail.js?t=' + t + '"><\/script>')
 </script>
-<!-- <script src="../js/public.js"></script>
-<script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
-<script src="../js/flexible.js"></script>
-<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/jquery-weui/1.2.1/js/jquery-weui.min.js"></script>
-<script src="../js/setWx-config.js"></script> -->
 </html>

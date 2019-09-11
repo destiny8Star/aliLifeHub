@@ -18,46 +18,11 @@ requirejs(["jquery",  "wui", "flex", "ajs", "public", "swx",], function ($, wui,
     let openId = localStorage.getItem("openid")
     //获取店铺id
     var storeUserId = public.getUrlParms("storeUserId");
-    var storeId = public.getUrlParms("storeId");
-    var amount = public.getUrlParms("amount");
-    console.log('storeUserId', openId, storeUserId, storeId, amount)
-    //获取返现金额
-    function getMon(storeId, amount) {
-        let timestamp = public.getTimes()
-        ajs.showLoading("加载中");
-        $.ajax({
-            url: public.baseUrl + "/api/alipay/getPayeeAmount",
-            method: "POST",
-            data: {
-                storeId: storeId,
-                amount: amount,
-                timestamp: timestamp,
-                deviceType: "3",
-            },
-            dataType: "json",
-            success: function (res) {
-                ajs.hideLoading();
-                console.log("返现结果", res)
-                if (res.code == 200) {
-                    $(".yw").text(res.data)
-                } else {
-                    ajs.showToast({
-                        content: "网络异常",
-                        type: "fail"
-                    });
-                }
-            }
-        })
+    if (storeUserId) {
+        $(".hbPhone").show()
+        $(".getHb").hide()
     }
-    getMon(storeId, amount)
-    $(".hbBtn").click(function () {
-        $(".hb").hide()
-        if (storeUserId) {
-            $(".hbPhone").show()
-        } else {
-            $(".getHb").show()
-        }
-    })
+    console.log('storeUserId', openId, storeUserId)
     //获取验证码
     let flag = true
     $(".bnt-code").click(function () {
@@ -116,18 +81,23 @@ requirejs(["jquery",  "wui", "flex", "ajs", "public", "swx",], function ($, wui,
                     console.log("绑定结果", res)
                     if (res.code == 200) {
                         ajs.showToast({
-                            content: "领取成功",
+                            content: "绑定成功",
                             type:"success",
                             duration: 3000
                         }, function () {
                                 $(".hbPhone").hide()
                                 $(".getHb").show()
                         });
-                    } else {
+                    } else if(res.code==500){
                         ajs.showToast({
                             content: "网络异常",
                             type: "fail"
                         });
+                    }else{
+                        ajs.showToast({
+                            content: res.message,
+                            type: "fail"
+                        }); 
                     }
                 }
             })

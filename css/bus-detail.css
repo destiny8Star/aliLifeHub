@@ -10,9 +10,9 @@ body {
 }
 
 h3 {
-    font-size: .32rem;
+    font-size: .4rem;
     color: #3E3E4D;
-    margin-bottom: .3rem
+    margin-bottom: .1rem
 }
 
 h5 {
@@ -22,41 +22,140 @@ h5 {
 }
 
 .pic {
-    margin-bottom: .28rem;
-    border-bottom: .01rem solid #F4F4F4;
-    white-space: nowrap;
+    margin-bottom: .32rem;
     width: 100%;
     overflow-x: scroll;
+    height: auto;
+    align-items: center;
+    flex-wrap: nowrap
 }
 
 .pic::-webkit-scrollbar {
     display: none;
 }
-
-.pic img {
-    width: 2.28rem;
-    height: auto;
-    max-height: 1.8rem;
+.pic-item{
+    width: 2.56rem;
+    height: 1.92rem;
     margin-right: .15rem;
-    margin-bottom: .14rem;
-    display: inline;
+}
+.pic img {
+    width: 2.56rem;
+    height: 1.92rem;
+    border-radius: .08rem
 }
 
 .address {
     width: 100%;
-    margin-bottom: .65rem
+    margin-bottom: .65rem;
 }
 
-.address img {
-    width: .32rem;
-    height: .32rem;
+.add-right img {
+    width: .36rem;
+    height: .36rem;
 }
 
-.address span {
-    font-size: .24rem;
+.add-detail{
+    font-size: .26rem;
     color: #3E3E4D;
     width: 5rem;
-    text-overflow: ellipsis;
+    /* text-overflow: ellipsis;
     overflow: hidden;
-    white-space: nowrap;
+    white-space: nowrap; */
+}
+.add-dis{
+    color: #909090
+}
+.add-left{
+    align-items: start
+}
+.add-left img{
+    width: .34rem;
+    height: .34rem;
+    margin-right: .1rem
+}
+.pic-more{
+    font-size: .24rem;
+    color: #FFB715;
+    letter-spacing: .04rem; 
+    writing-mode:vertical-lr;
+}
+.pic-num{
+    writing-mode:horizontal-tb;
+    letter-spacing:0; 
+}
+.weui-btn_zf{
+    font-size: .32rem;
+    color: #3E3E4D;
+    font-weight: bold
+}
+.per{
+    background-image: url("../img/per.png");
+    width: .96rem;
+    height: .28rem;
+    font-size: .2rem;
+    color: #3E3E4D;
+    font-weight: bold;
+    margin-bottom: .2rem;
+    background-size: cover;
+    background-position: center;
+     display: flex;
+    align-content: center;
+    justify-content: center
+}
+.napo{
+    font-size: .26rem;
+    color: #3E3E4D;
+    margin-bottom: .2rem
+}
+.lines{
+   color: #3E3E4D;
+   margin:0 .1rem
+}
+.napo-po{
+    color: #FFB715
+}
+.mask{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none
+}
+.maskbox{
+    width: 6rem;
+    padding-top: .4rem ;
+    background: #fff;
+    margin: 40% auto;
+    border-radius: .24rem;
+    overflow: hidden;
+}
+
+.maskphone{
+    font-size: .36rem;
+    text-align: center;
+    color: #3E3E4D;
+    font-weight: bold
+}
+.maskbtn{
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-top: .01rem solid #cfcfcf;
+    margin-top: .2rem
+}
+.btn-cli{
+    width: 50%;
+    height: 1rem;
+    font-size: .34rem;
+    color: #3E3E4D;
+    text-align: center;
+    line-height: 1rem;
+}
+.btn-s{
+    color: #01a1ff;
+    border-left: .01rem solid #cfcfcf;
+    font-weight: bold
 }

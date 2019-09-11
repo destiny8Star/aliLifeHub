@@ -58,12 +58,11 @@ define(["jquery","ajs","public","wui"],function($,ajs,public){
                 ajs.hideLoading();
                 console.log(res)
                 if (res.code == 200) {
-                    let str = '';
-                    info = res.data
-                    storeUserId = info.storeUserId
-                    str += ' <img src="' + info.pic + '" alt="">' + info.storeName + ''
-                    $(".pay-tit").html(str)
-                    $(".my-balance").text('(￥' + info.balance + ')')
+                    let info = res.data
+                    // storeUserId = info.storeUserId
+                    discount = info.discount
+                    $(".bt-leq").text("平台补贴" + discount + "%")
+                    ajs.setNavigationBar(info.storeName);
                 } else if (res.code == 11081) {
                     if(isF){
                         isF=false
@@ -78,7 +77,7 @@ define(["jquery","ajs","public","wui"],function($,ajs,public){
                     }
                 } else {
                     ajs.showToast({
-                        content: "网络异常",
+                        content:"res.message",
                         type: "fail"
                     });
                 }

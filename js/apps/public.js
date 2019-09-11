@@ -1,9 +1,9 @@
 define(["jquery"],function($){
-    // var baseUrl = "http://test.dianjishenghuo.cn"//测试环境接口域名
+    var baseUrl = "http://test.dianjishenghuo.cn"//测试环境接口域名
     //  var baseUrl = "http://djsh.vipgz1.idcfengye.com" //本地环境
-     var baseUrl = "https://product.dianjishenghuo.cn"//开发环境接口域名
+    //  var baseUrl = "https://product.dianjishenghuo.cn"//生产环境接口域名
 
-    // var baseUrlz = "http://linzhiying.natapp1.cc"//本地接口域名
+    // var baseUrl = "http://linzhiying.natapp1.cc"//本地接口域名
     // var serUrl = window.location.hostname;
     //  var serUrl = "http://wechattest.dianjishenghuo.cn"  //存放的测试环境的域名
     //  var serUrl = "http://wechat.dianjishenghuo.cn" //存放的生产环境的域名
@@ -68,13 +68,29 @@ define(["jquery"],function($){
         str = str.replace(/\.\d{3,}$/, '')
         return str;
     }
+    //判断ios或者安卓
+    function detect() {
+        var equipmentType = "";
+        var agent = navigator.userAgent.toLowerCase();
+        var android = agent.indexOf("android");
+        var iphone = agent.indexOf("iphone");
+        var ipad = agent.indexOf("ipad");
+        if (android != -1) {
+            equipmentType = "android";
+        }
+        if (iphone != -1 || ipad != -1) {
+            equipmentType = "ios";
+        }
+        return equipmentType;
+    }
 
     return{
         baseUrl: baseUrl,
         getUrlParms: getUrlParms,
         getTimes: getTimes,
         getPCode: getPCode,
-        NumberCheck: NumberCheck
+        NumberCheck: NumberCheck,
+        detect: detect
     }
 })  
   

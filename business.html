@@ -10,6 +10,7 @@
     <title>商圈</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.3/style/weui.min.css">
     <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <script>
         let t0 = new Date().getTime()
         document.write('<link rel="stylesheet" href="css/business.css?t=' + t0 + '">')
@@ -28,15 +29,23 @@
     </div>
     <!-- 顶部搜索栏 -->
     <section class="bus-top flex_bet">
-        <a href="business/search.html">
-            <div class="input flex_bet"><img src="img/SS.png" alt=""> <input type="text" placeholder="搜索商铺" disabled>
+        <a href="my/selCity.html">
+            <div class="bus-address flex_bet">
+                <img src="img/DW.png" alt="" class="add-img">
+                <div class="add-woc">城市</div>
+                <img src="img/XL.png" alt="" class="add-imga">
             </div>
         </a>
-        <img src="img/XX.png" alt="">
+        <a href="business/search.html">
+            <div class="input flex_bet"><img src="img/SS.png" alt=""> <input type="text" placeholder="搜索商铺" disabled></div>
+        </a>
+        <img src="img/XX.png" alt="" class="bus-tz">
     </section>
     <!-- 下拉刷新上拉加载大框 -->
-    <div class="content" style="background-color: #FFFFFF; width: 100%;height:97%; margin-top: 0.4rem;position: absolute; padding-bottom:45px; overflow: hidden;-webkit-overflow-scrolling:touch">
-        <div class="list-main-mian weui-form-preview infinite weui-pull-to-refresh" id="listwrap" style="height:100%; margin-top: 1px;overflow:auto;  z-index: 1">
+    <div class="content"
+        style="background-color: #FFFFFF; width: 100%;height:97%; margin-top: 0.4rem;position: absolute; padding-bottom:45px; overflow: hidden;-webkit-overflow-scrolling:touch">
+        <div class="list-main-mian weui-form-preview infinite weui-pull-to-refresh" id="listwrap"
+            style="height:100%; margin-top: 1px;overflow:auto;  z-index: 1">
             <!--下拉刷新-->
             <div class="weui-pull-to-refresh__layer" style="padding: 5px;">
                 <div class="weui-pull-to-refresh__arrow"></div>
@@ -47,30 +56,65 @@
             </div>
             <div class="weui-form-preview" id="Tolist">
                 <!--内容展示区域-->
-
+                <!-- 顶部banner -->
+                <section class="topBox">
+                    <!-- <img src="img/DP.png" alt="" class="topImg"> -->
+                </section>
                 <!-- 分类 -->
                 <section class="bus-type flex_bet">
                     <!-- <a href="business/busList.html">
-                        <div class="type-item">
-                            <img src="img/YL.png" alt="">
-                            <span>服装箱包</span>
+                            <div class="type-item">
+                                <img src="img/YL.png" alt="">
+                                <span>服装箱包</span>
+                            </div>
+                        </a> -->
+                </section>
+                <!-- //通知框 -->
+                <section class="notice flex">
+                    <img src="img/tz.png" alt="" class="notImg">
+                    <div class="notBox">
+                        <div class="swiper-container swi-tips swiper-no-swiping">
+                            <div class="swiper-wrapper">
+                                <!-- <div class="swiper-slide">啊哈哈哈哈哈</div>
+                                        <div class="swiper-slide">嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟嘟</div> -->
+                            </div>
                         </div>
-                    </a> -->
+                    </div>
+                </section>
+                <!-- //tab选项 -->
+                <section class="tabBox flex_aro">
+                    <span class="tabItem selBar tabAll flex">全部<img src="img/tab-all.png" alt="" class="tab-arr"></span>
+                    <span class="tabItem tabType tabJl" data-type="false" data-type2="2">距离</span>
+                    <span class="tabItem tabType tabRq" data-type="false" data-type2="3">销量</span>
                 </section>
                 <!-- 商店 -->
                 <section class="bus-store">
                     <!-- <a href="business/detail.html">
-                        <div class="store-item flex">
-                            <div class="store-item-img"><img src="img/DP.png" alt=""></div>
-                            <div class="store-item-woc">
-                                <h3 class="store-tit">优卡可可</h3>
-                                <div class="store-det"><span>烘焙糕点面包</span> | <span>人气336</span></div>
-                                <p class="store-add">滨江区立业路长江西苑58号商铺</p>
+                            <div class="store-item-box">
+                                <div class="store-item flex">
+                                    <div class="store-item-img"><img src="img/DP.png" alt=""></div>
+                                    <div class="store-item-woc">
+                                        <div class="store-item-tits flex">
+                                           <h3 class="store-tit">优卡可可</h3>
+                                           <div class="store-tit-ico">折扣5%</div>
+                                        </div>
+                                        <div class="store-det"><span>烘焙糕点面包</span> | <span class="mood">销量336</span></div>
+                                        <p class="store-add flex_bet">
+                                            <span class="storeAdd-left">相山区杭州市地球村平行宇宙相山区杭州市地球村平行宇宙</span>
+                                            <span class="storeNum">700m</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="store-item-imgs flex_bet">
+                                    <img src="img/DP.png" alt="">
+                                    <img src="img/DP.png" alt="">
+                                </div>
                             </div>
-                        </div>
-                    </a> -->
+                         
+                        </a> -->
                 </section>
                 <!-- //没有更多数据 -->
+                <div class="lack-img-pig"><img src="img/pig.png" alt="" class="lack-pig">该地区或分类暂无商家</div>
                 <div class="weui-cells__title show-more">无更多数据</div>
             </div>
             <div class="weui-loadmore">
@@ -79,15 +123,33 @@
             </div>
         </div>
     </div>
-
+    <!-- //弹框 -->
+    <section class="tabMask">
+        <div class="tabMask-box">
+            <div class="tabMask-top flex_aro">
+                <span class="tabItem selBar tabAll flex hideTaball">全部<img src="img/tab-all.png" alt=""
+                        class="tab-arr tab-arrf"></span>
+                <span class="tabItem tabType tabJl" data-type="false" data-type2="2">距离</span>
+                <span class="tabItem tabType tabRq" data-type="false" data-type2="3">销量</span>
+            </div>
+            <div class="tabMask-bot flex">
+                <div class="tabMask-botL">
+                    <!-- <div class="tabMask-botL-item selTM">全部</div> -->
+                </div>
+                <div class="tabMask-botR">
+                    <!-- <div class="tabMask-botL-item selTMI">商铺保健</div> -->
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- 底部tabar -->
     <div class="weui-tabbar">
         <!-- <a href="index.html" class="weui-tabbar__item ">
-            <div class="weui-tabbar__icon">
-                <img src="./img/SC-WX.png" alt="">
-            </div>
-            <p class="weui-tabbar__label">商城</p>
-        </a> -->
+                <div class="weui-tabbar__icon">
+                    <img src="./img/SC-WX.png" alt="">
+                </div>
+                <p class="weui-tabbar__label">商城</p>
+            </a> -->
         <a href="javascript:;" class="weui-tabbar__item weui-bar__item--on">
             <div class="weui-tabbar__icon">
                 <img src="./img/SQ-YX.png" alt="">
@@ -101,7 +163,7 @@
             <p class="weui-tabbar__label">我的</p>
         </a>
     </div>
-</body>
+    </body>
 <script>
     let t = new Date().getTime()
     document.write('<script src="js/libs/require.js" data-main="js/business.js?t=' + t + '"><\/script>')

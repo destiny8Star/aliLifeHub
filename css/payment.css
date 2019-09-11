@@ -1,65 +1,122 @@
 html,
 body {
-    background: #f8f8f8
+    background: #f8f8f8;
 }
 .pay-top {
-    background: #fff;
     border-radius: .12rem;
-    width: 7.02rem;
-    margin: .36rem auto;
-    padding: .44rem .48rem .54rem
+    width: 100%;
+    margin: .4rem 0 .64rem;
+    overflow: hidden;
 }
 .pay-tit {
-    align-items: center;
-    font-size: .34rem;
+    font-size: .36rem;
     color: #3E3E4D;
-    margin-bottom: .32rem
+    margin-bottom: .24rem;
+    padding:0 .26rem;
+    font-weight: bold;
 }
 
-.pay-tit img {
-    width: .64rem;
-    height: .64rem;
-    margin-right: .22rem
-}
-
-.pay-bot {
-    align-items: center
-}
-
-.pay-bot-y {
-    font-size: .6rem;
-    color: #3E3E4D;
-    margin-right: .22rem
-}
 
 .pay-bot input {
-    max-width: 3.5rem;
+    width: 100%;
     outline: none;
     border: 0;
-    font-size: .54rem
+    color: #3E3E4D;
+    font-size: .56rem;
+    border-radius: .08rem;
+    padding:.22rem .24rem;
+    /* height: 1.22rem; */
+    font-weight: bold;
+    background:#fff;
+
 }
 
 .pay-bot input::-webkit-input-placeholder {
     color: #ccc;
-    font-size: .34rem;
+    font-size: .4rem;
+    font-weight: 100;
+    padding-top: .1rem
 }
 
 .pay-bot input::-moz-placeholder {
     color: #ccc;
-    font-size: .34rem;
+    font-size: .4rem;
+    font-weight: 100;
+     padding-top: .1rem
 }
 
 .pay-bot input:-ms-input-placeholder {
     color: #ccc;
-    font-size: .34rem;
+    font-size: .4rem;
+    font-weight: 100;
+     padding-top: .1rem
+}
+.bt{
+    width: 100%;
+    font-size: .32rem;
+    color: #FF1515;
+    margin-top: .2rem;
+    font-weight: bold;
+     padding:0 .26rem;
+}
+.bt-le{
+    color: #3E3E4D;
+    font-weight: normal;
+    font-family:"PingFang-SC-normal";
+}
+.bt-ris{
+    color: #3E3E4D
 }
 
 .pay-bott {
     width: 100%;
-    background: #fff;
-    padding: .36rem .22rem;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    padding: 0 .26rem;
+  
  }
- 
+ .weui-btn{
+     font-size: .32rem;
+     color: #3E3E4D;
+     font-weight: bold
+ }
+ .tips{
+     text-align: center;
+     margin-top: .24rem;
+     font-size: .24rem;
+     color: #909090;
+    font-family:"PingFang-SC-normal";
+ }
+ .yh-tip{
+     float: right;
+     font-size: .28rem;
+     color: #01A1FF;
+     font-weight: bold;
+     margin-right: .26rem
+ }
+ /* .mask{
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 0;
+     left: 0;
+     background: rgba(0, 0, 0, 0.6);
+     display: none
+ } */
+ .mask-box{
+     width: 6.08rem;
+     background: #fff;
+     margin: 15% auto 0;
+     padding:.32rem .24rem .24rem;
+     border-radius: .08rem
+ }
+ h4{
+     text-align: center;
+     font-size: .44rem;
+     color: #3E3E4D;
+     margin-bottom: .3rem
+ }
+ .mask-cont{
+     font-size: .28rem;
+     color: #3E3E4D;
+     display: inline-block;
+     margin-bottom: .2rem
+ }
